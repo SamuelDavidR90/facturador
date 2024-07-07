@@ -16,9 +16,8 @@ public class POO_FACTURA {
        String respuesta = tecladoText.nextLine();
        
        while (respuesta.equalsIgnoreCase("si")){
-           System.out.println("Que producto o servicio desea");
-           System.out.println("1 Minisplit de 12000 btu ");
-           System.out.println("2 Instalacion");
+           System.out.println("Que producto o servicio desea: \n 1 Minisplit \n 2 Instalacion");
+           
            
            Scanner tecladoInt = new Scanner(System.in);
            int eleccion = tecladoInt.nextInt();
@@ -36,8 +35,7 @@ public class POO_FACTURA {
          
        }
        
-       System.out.println("El total de equipos es igual a " + minisplit12.getTotal());
-       System.out.println("El total de servicio de instalacion es  " + instalacion.getTotal());
-       System.out.println("El total facturado es " + (minisplit12.getTotal() + instalacion.getTotal())); 
+       double totalFactura = (minisplit12.getTotal() + instalacion.getTotal());
+       System.out.println("El total facturado es " + totalFactura)); 
     }
 }
