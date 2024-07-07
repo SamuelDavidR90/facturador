@@ -35,7 +35,15 @@ public class POO_FACTURA {
          
        }
        
-       double totalFactura = (minisplit12.getTotal() + instalacion.getTotal());
-       System.out.println("El total facturado es " + totalFactura)); 
+      DecimalFormat df = new DecimalFormat ("#.##");
+       
+       String resultadoSubtotal = df.format(subtotalFactura);
+        System.out.println("Subtotal----> " + resultadoSubtotal);
+        
+        String resultadoIva = df.format(ivaFactura);
+        System.out.println("iva----> " + resultadoIva);
+        
+        String resultadoTotal = df.format(totalFactura);
+        System.out.println("El total facturado es ------>" + resultadoTotal);
     }
 }
